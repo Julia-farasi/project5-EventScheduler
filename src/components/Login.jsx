@@ -24,7 +24,7 @@ function Login() {
         text: "You are now beeing redirected to your profile.",
         icon: "success",
       });
-      navigate("/profile");
+      navigate("/");
     } catch (error) {
       console.log(error);
       Swal.fire({

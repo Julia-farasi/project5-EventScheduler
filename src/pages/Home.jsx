@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 // import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthProvider";
 
 function Home() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [liked, setLiked] = useState(false);
-
+  const { isAuthenticated } = useAuth();  
   const token = localStorage.getItem("token");
 
   const deleteEntry = async (id) => {
@@ -106,12 +107,15 @@ function Home() {
                   More Details
                 </Link>
 
+              {isAuthenticated && (
                 <button
                   onClick={() => deleteEntry(event.id)}
                   className="flex-1 text-center px-3 py-1.5 text-xs font-medium text-white bg-red-600 rounded-lg shadow hover:bg-red-700 transition-all duration-300"
                 >
                   Delete Entry
                 </button>
+              )}
+
               </div>
 
               <button
