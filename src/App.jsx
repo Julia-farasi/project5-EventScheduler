@@ -16,7 +16,14 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="events/:id" element={<EventDetails />} />
+          <Route
+            path="events/:id"
+            element={
+              <ProtectedRoute>
+                <EventDetails />
+              </ProtectedRoute>
+            }
+          />
 
           <Route
             path="createEvent"

@@ -8,9 +8,20 @@ function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // const { eventId } = useParams();
-  // const eventId = 3;
-  // console.log(eventId);
+  const token = localStorage.getItem("token");
+
+  const deleteEntry = async (id) => {
+    console.log(id);
+    try {
+      await axios.delete(`http://localhost:3001/api/events/${id}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      // console.log("Hallo", headers);
+      setEvents(events.filter((event) => event.id !== id)); // Lokalen Zustand aktualisieren
+    } catch (error) {
+      console.error("Fehler beim Löschen:", error);
+    }
+  };
 
   useEffect(() => {
     const fetchEvent = async () => {
@@ -58,6 +69,11 @@ function Home() {
               <p className="text-gray-300 ">S || N: {event.latitude}</p>
               <p className="text-gray-300 ">O || W: {event.longitude}</p>
               <Link to={`/events/${event.id}`}>DETAILS HIER LANG...</Link>
+              <p>
+                <button onClick={() => deleteEntry(event.id)} className="">
+                  Eintrag löschen
+                </button>
+              </p>
             </div>
           ))}
         </div>
