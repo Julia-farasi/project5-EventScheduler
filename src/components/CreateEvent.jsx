@@ -212,7 +212,7 @@ function CreateEvent() {
       </MapContainer>
     ) : (
       <div className="flex items-center justify-center h-full text-gray-400 italic p-6">
-        Gib eine gültige Location ein...
+        Please enter a valid location...
       </div>
     )}
   </div>

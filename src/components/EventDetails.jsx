@@ -39,32 +39,32 @@ function EventDetails() {
 
           <div className="space-y-2 text-gray-300">
             <p>
-              <span className="font-semibold text-indigo-300">Titel:</span>{" "}
+              <span className="font-semibold text-indigo-300">Title:</span>{" "}
               {event.title}
             </p>
             <p>
-              <span className="font-semibold text-indigo-300">Datum:</span>{" "}
+              <span className="font-semibold text-indigo-300">Date:</span>{" "}
               {new Date(event.date).toLocaleString("de-DE")}
             </p>
             <p>
               <span className="font-semibold text-indigo-300">
-                Beschreibung:
+                Description:
               </span>{" "}
               {event.description}
             </p>
             <p>
-              <span className="font-semibold text-indigo-300">Ort:</span>{" "}
+              <span className="font-semibold text-indigo-300">Location:</span>{" "}
               {event.location}
             </p>
             <p>
               <span className="font-semibold text-indigo-300">
-                Breite (S/N):
+                Latitude (S/N):
               </span>{" "}
               {event.latitude}
             </p>
             <p>
               <span className="font-semibold text-indigo-300">
-                Länge (O/W):
+                Longitude (O/W):
               </span>{" "}
               {event.longitude}
             </p>
@@ -74,7 +74,7 @@ function EventDetails() {
               to="/"
               className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-xl shadow transition-all duration-300"
             >
-              ⬅ Zurück zur Übersicht
+              ⬅ Back to Homepage!
             </Link>
           </div>
 
@@ -104,7 +104,7 @@ function EventDetails() {
           )}
         </>
       ) : (
-        <p className="text-center text-gray-500">Event nicht gefunden.</p>
+        <p className="text-center text-gray-500">No event found.</p>
       )}
     </div>
   );

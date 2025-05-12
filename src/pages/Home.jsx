@@ -81,7 +81,7 @@ function Home() {
               <div className="space-y-2 text-sm text-indigo-100">
                 <p className="flex items-center text-sm text-indigo-100">
                   <span className="font-semibold text-indigo-300">
-                    📅 Datum:
+                    📅 Date:
                   </span>
                   {new Date(event.date).toLocaleString("de-DE", {
                     day: "2-digit",
