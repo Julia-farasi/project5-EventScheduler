@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import { Link } from "react-router-dom";
 
 function EventDetails() {
   const [event, setEvent] = useState(null);
@@ -41,12 +42,12 @@ function EventDetails() {
             <p><span className="font-semibold text-indigo-300">Länge (O/W):</span> {event.longitude}</p>
           </div>
           <div className="mt-6 text-center">
-            <button
-              onClick={() => window.history.back()}
+            <Link
+              to="/"
               className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-xl shadow transition-all duration-300"
             >
               ⬅ Zurück zur Übersicht
-            </button>
+            </Link>
           </div>
 
           {event.latitude && event.longitude && (
