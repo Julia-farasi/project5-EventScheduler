@@ -14,7 +14,8 @@ function EventDetails() {
       try {
         setLoading(true);
         const response = await axios.get(
-            `http://localhost:3001/api/events/${id}`);
+          `http://localhost:3001/api/events/${id}`
+        );
         setEvent(response.data);
       } catch (error) {
         console.error(error);
@@ -36,10 +37,10 @@ function EventDetails() {
           <h2>Event Details</h2>
           <h3>{event.title}</h3>
           <p>{event.date}</p>
-      <p>{event.description}</p>
-      <p>{event.location}</p>
-      <p>{event.latitude}</p>
-      <p>{event.longitude}</p>
+          <p>{event.description}</p>
+          <p>{event.location}</p>
+          <p>{event.latitude}</p>
+          <p>{event.longitude}</p>
         </div>
       ) : (
         <p>not found</p>
