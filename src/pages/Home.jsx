@@ -50,14 +50,14 @@ function Home() {
               <h3 className="text-lg text-center font-semibold mb-2">
                 {event.title}
               </h3>
-              <p className="text-gray-300">Datum: {event.date}</p>
+              <p className="text-gray-300">Date: {event.date}</p>
               <p className="text-gray-300 ">
-                Beschreibung: {event.description}
+                Description: {event.description}
               </p>
               <p className="text-gray-300 ">Location: {event.location}</p>
               <p className="text-gray-300 ">S || N: {event.latitude}</p>
               <p className="text-gray-300 ">O || W: {event.longitude}</p>
-              <Link to={`/events/${event.id}`}>DETAILS HIER LANG...</Link>
+              <Link to={`/events/${event.id}`}>More Details...</Link>
             </div>
           ))}
         </div>

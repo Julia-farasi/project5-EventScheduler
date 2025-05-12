@@ -40,7 +40,7 @@ function Login() {
     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
   />
 
-  <label className="text-gray-300">Passwort:</label>
+  <label className="text-gray-300">Password:</label>
   <input
     className="p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
     type="password"
