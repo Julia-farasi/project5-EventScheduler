@@ -92,7 +92,7 @@ function CreateEvent() {
     onSubmit={handleSubmit}
     className="bg-gray-800 p-6 rounded-2xl shadow-lg w-full lg:w-1/2 flex flex-col space-y-4"
   >
-    <h2 className="text-2xl font-bold text-center text-white">Create Event</h2>
+    <h2 className="flex justify-center items-center gap-2 text-2xl font-bold text-center text-white"><IoCreateOutline />Create Event</h2>
 
     {/* Date & Time */}
     <div className="flex flex-col">
@@ -185,8 +185,8 @@ function CreateEvent() {
 
     <button
       type="submit"
-      className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-xl shadow hover:scale-105 transition-all duration-300"
-    >
+      className="flex justify-center items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-xl shadow hover:scale-105 transition-all duration-300"
+    ><BsFillSendPlusFill />
       Send
     </button>
   </form>
