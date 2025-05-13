@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 /*:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -68,6 +69,8 @@ button:focus-visible {
   }
 }
 /****************************/
+
+/*
 * {
   margin: 0;
   padding: 0;
@@ -118,3 +121,4 @@ nav button:hover {
 .active {
   border-bottom: 2px solid white;
 }
+*/
