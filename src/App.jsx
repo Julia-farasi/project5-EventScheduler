@@ -7,7 +7,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
-import CreateEvent from "./components/createEvent";
+import CreateEvent from "./components/CreateEvent";
 import EventDetails from "./components/EventDetails";
 
 const App = () => {
